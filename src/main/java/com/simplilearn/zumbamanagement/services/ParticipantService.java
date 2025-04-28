@@ -12,11 +12,6 @@ public class ParticipantService implements Service<Participant> {
     private final Dao<Participant> dao = new ParticipantDaoImpl();
 
     @Override
-    public Participant findById(long id) {
-        return null;
-    }
-
-    @Override
     public List<Participant> findAll() {
         return dao.getAll();
     }
@@ -32,10 +27,6 @@ public class ParticipantService implements Service<Participant> {
         Participant participant = new Participant(null, name, email, phone, sessionId);
         Dao<Participant> dao = new ParticipantDaoImpl();
         dao.save(participant);
-    }
-
-    public Participant update(Participant participant) {
-        return null;
     }
 
     public void delete(List<Participant> participants) {

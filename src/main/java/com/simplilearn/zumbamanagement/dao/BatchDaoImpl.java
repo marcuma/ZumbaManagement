@@ -17,11 +17,6 @@ public class BatchDaoImpl implements Dao<Batch> {
     private final Logger LOGGER = Logger.getLogger(BatchService.class);
 
     @Override
-    public Batch getById(int id) {
-        return null;
-    }
-
-    @Override
     public List<Batch> getAll() {
         String sql = "SELECT * FROM batch";
         List<Batch> batches = new ArrayList<>();
@@ -56,11 +51,6 @@ public class BatchDaoImpl implements Dao<Batch> {
             throw new RuntimeException();
         }
         return 0;
-    }
-
-    @Override
-    public void update(Batch batch) {
-
     }
 
     @Override

@@ -54,8 +54,6 @@ public class MainController extends HttpServlet {
                     req.getSession().setAttribute("participants", participants);
                     req.getRequestDispatcher("/main.jsp").forward(req, resp);
                 }
-
-
             }
 
             case "add-batch" -> {
@@ -66,12 +64,6 @@ public class MainController extends HttpServlet {
                 req.getRequestDispatcher("/main.jsp").forward(req, resp);
 
                 resp.sendRedirect(req.getContextPath() + "/main.jsp");
-            }
-            case "update-batch" -> {
-                System.out.println("update-batch");
-            }
-            case "update-participant" -> {
-                System.out.println("update-participant");
             }
             case "delete-batch" -> {
                 String[] batchIds = req.getParameterValues("batchId");

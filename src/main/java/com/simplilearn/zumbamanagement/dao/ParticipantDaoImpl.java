@@ -17,11 +17,6 @@ public class ParticipantDaoImpl implements Dao<Participant> {
     private final Logger LOGGER = Logger.getLogger(ParticipantDaoImpl.class);
 
     @Override
-    public Participant getById(int id) {
-        return null;
-    }
-
-    @Override
     public List<Participant> getAll() {
         String sql = "SELECT * FROM participant";
         List<Participant> participants = new ArrayList<>();
@@ -60,11 +55,6 @@ public class ParticipantDaoImpl implements Dao<Participant> {
             LOGGER.error(e);
         }
         return 0;
-    }
-
-    @Override
-    public void update(Participant participant) {
-
     }
 
     @Override

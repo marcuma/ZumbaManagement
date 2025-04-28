@@ -15,11 +15,6 @@ public class BatchService implements Service<Batch> {
     private final Dao<Batch> dao = new BatchDaoImpl();
 
     @Override
-    public Batch findById(long id) {
-        return null;
-    }
-
-    @Override
     public List<Batch> findAll() {
         List<Batch> batches = dao.getAll();
         return batches;
@@ -31,11 +26,6 @@ public class BatchService implements Service<Batch> {
         Batch batch = new Batch(session);
         System.out.println(batch.getSession());
         dao.save(batch);
-    }
-
-    @Override
-    public Batch update(Batch batch) {
-        return null;
     }
 
     @Override

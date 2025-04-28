@@ -6,9 +6,7 @@ import com.simplilearn.zumbamanagement.model.Batch;
 import java.util.List;
 
 public interface Dao<T> {
-    public T getById(int id);
     public List<T> getAll();
     public  int save(T t);
-    public void update(T t);
     public void delete(List<T> t);
 }
